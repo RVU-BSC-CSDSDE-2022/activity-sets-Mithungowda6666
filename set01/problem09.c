@@ -20,6 +20,7 @@ double input(){
 double square_root(double n){
   double x;
   x = sqrt(n);//babylonian method
+  
   return(x);
 }
 
