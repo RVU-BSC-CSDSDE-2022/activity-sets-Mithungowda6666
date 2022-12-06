@@ -20,12 +20,20 @@ int input() {
 }
 void compare(int a, int b, int c, int *largest) {
      if(a>b) {
-      if (a>=b && a>=c){*largest = a;}
-      else{*largest = c;}
+       if (a>=b && a>=c) {
+          *largest = a;
+         }
+     else{
+       *largest = c;
+         }
      }
      else {
-      if(b>=a && b>=c){*largest = b;}
-      else{*largest = c;}
+     if(b>=a && b>=c) {
+       *largest = b;
+       }
+     else{
+       *largest = c;
+       }
     }
 }
 void output(int a, int b, int c, int largest) {
