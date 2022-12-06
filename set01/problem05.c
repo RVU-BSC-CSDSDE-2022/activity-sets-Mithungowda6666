@@ -20,17 +20,12 @@ int input()  {
 //Use && operator
 int compare(int a, int b, int c ) {
     if(a>=b && a>=c) {
-      return(a);
+        return(a);
       }
-    else {
-  
-    if(b>=c && b>=c) {
-      return(b);
+    if(b>=a && b>=c) {
+        return(b);
       }
-    else{
-      return(c);
-      }
-  }
+    return(c);
 }
 
 
