@@ -9,7 +9,7 @@ void output(int a, int b, int c, int isscalene);
   b = input_side();
   c = input_side(); 
   d = check_scalene(a,b,c);
-  output(a,b,c,d)
+  output(a,b,c,d);
     } 
 int input_side() {
   int a;
@@ -19,20 +19,23 @@ int input_side() {
 }
 int check_scalene(int a, int b, int c) {
         int isscalene;
-     if(a != b && b != c && c != a)
+     if(a != b && b != c && c != a){
        return 1;
+       }
+      else{
+        if(a==b && b==c && c==a){
        return 2;
-
-  
-           
-  
+          }
+        else {return 3;}
+        }
   }
 void output(int a, int b, int c, int isscalene) {
      if(isscalene = 1)
         {  
-          printf("It's a Scalene Triangle\n");  
+          printf("the given triangle with sides %d,%d,%d is not scalene Triangle\n",a,b,c);
         }  
          else {
-           printf("the given triangle with sides %d,%d,%d is not scalene Triangle\n");
+           printf("It's a Scalene Triangle\n");  
          }
   }
+ 
