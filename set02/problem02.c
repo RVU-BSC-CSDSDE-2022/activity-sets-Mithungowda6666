@@ -10,7 +10,7 @@ void output(int a, int b, int c, int isscalene);
   c = input_side(); 
   d = check_scalene(a,b,c);
   output(a,b,c,d);
-    } 
+  } 
 int input_side() {
   int a;
   printf("Enter the value :\n");
