@@ -1,5 +1,7 @@
 #include <stdio.h>
-void change(int r, int m, int *sum);
+int  input();
+void add(int r, int m, int *sum);
+void add(int r, int m, int *sum);
 
 int main()  
 {

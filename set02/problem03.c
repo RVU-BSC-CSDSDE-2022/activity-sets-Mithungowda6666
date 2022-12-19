@@ -15,37 +15,12 @@ int input_number() {
   return(n);
 }
 int is_composite(int n) {
-  int result,i;
-  if(n<1)
-  {
-   return(1);
-  }
-  else {
-    if(n==1)
-    {
-      return(2);
-    }
-  else
-     {
-    for(i=2;i<=(n/2);i++)
-    {
-      if((n%i)==0){
-        return(3)
-    }
+  int i, count=0;
+  for(i=1;i<n;i++)
+   if(n%i == 0){
+     count = count+1;
    }
+  return count;
   }
- }
-}
-void output(int n, int result){
-  if(result==1){
-    printf("enter the number greater than 1");
-  }
-  else{
-    if(result==2){
-      printf("the number 1 is neither prime nor composite");
-    }
-    else{
-      printf("the given number is ")
-    }
-  }
-}
+void output(int n, int result)
+  
