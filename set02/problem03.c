@@ -4,6 +4,14 @@ int input_number();
 int is_composite(int n);
 void output(int n, int result);
 
+int main() {
+  int n,result;
+  n=input_number();
+  result=is_composite(n);
+  output(n,result);
+  return 0;
+}
+
 int input_number() {
   int n;
   printf("Enter the value");
@@ -22,5 +30,10 @@ int is_composite(int n) {
    }
   return count;
   }
-void output(int n, int result)
+void output(int n, int result) {
+  if(result==2)
+    printf("%d is a prime number");
+  else
+    printf("%d is a composite number");
+}
   
