@@ -31,7 +31,10 @@ int is_composite(int n) {
   return count;
   }
 void output(int n, int result) {
-  if(result==2)
+  if(n==1){
+       printf("1 is neihter prime or composite"); 
+  }
+  else if(result==2)
     printf("%d is a composite number\n",n);
   else
     printf("%d is a prime number\n",n);
