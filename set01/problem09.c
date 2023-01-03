@@ -18,13 +18,13 @@ double input(){
 }
 
 double square_root(double n){
-  float x,y;
-  x = sqrt(n);//babylonian 
+//babylonian 
   float x = n;
-    float y = 1;
-    while (x - y ) {
-        x = (x + y) / 2;
-        y = n / x;}
+  float y = 1;
+  float p = 0.000001;
+  while ((x - y)/x > p ) {
+    x = (x + y) / 2;
+    y = n / x;}
   return(x);
 }
 
