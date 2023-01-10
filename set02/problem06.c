@@ -15,7 +15,8 @@ void str_reverse(char *str, char *rev_str)
   for(i=0;i<l/2;i++)
     {
       c=str[i];
-      str
+      str[i]=
+        
     }
 }
   
