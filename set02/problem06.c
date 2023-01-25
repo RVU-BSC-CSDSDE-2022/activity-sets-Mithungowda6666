@@ -21,16 +21,17 @@ void input_string(char *a)
 }
 void str_reverse(char *str, char *rev_str)
 {
-  int i,l,c;
-  l=strlen(str);
-  
-  for(i=0;i<l/2;i++)
+   char l,i;
+   for(i=0;str[i]!='\0';i++);
+   printf("the lenght of string is %d\n",i);
+   l=i;
+   for(i=0;i<l;i++)
     {
-      c=str[i];
-      str[i] = str[l-1-i];
-      str[l-1-i] = c;
+       rev_str[i]=str[l-i-1];
     }
+   rev_str[i-l-1]='\0';
 }
+
 void output(char *a,char *rev_str)
 {
   printf("The reverse of given word is %s",a);

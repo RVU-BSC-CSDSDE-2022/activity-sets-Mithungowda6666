@@ -1,4 +1,5 @@
 #include<stdio.h>
+#include<stdlib.h>
 typedef struct _triangle {
 	float base, altitude, area;
 } Triangle;
@@ -11,6 +12,17 @@ void find_n_areas(int n, Triangle t[n]);
 Triangle find_smallest_triangle(int n, Triangle t[n]);
 void output(int n, Triangle t[n], Triangle smallest);
 
+int main()
+{
+  int n=input_n();
+  Triangle t[n],smallest;
+  input_n_triangles(n,t);
+  find_n_areas(n,t);
+  smallest= find_smallest_triangle(n,t);
+  output(n,t,smallest);
+  return 0;
+}
+
 int input_n()
 {
   int n;
@@ -20,6 +32,7 @@ int input_n()
     printf("Error");
     exit(0);
   }
+  return(n);
 }
 Triangle input_triangle()
 {
@@ -31,7 +44,7 @@ Triangle input_triangle()
     exit(0);
   }
   printf("Enter the Value of the height\n");
-  if(scanf("%f",&t.height)!=1)
+  if(scanf("%f",&t.altitude)!=1)
   {
     printf("Error");
     exit(0);
@@ -46,14 +59,29 @@ void input_n_triangles(int n, Triangle t[n])
     {
       t[i]=input_triangle();
     }
-  printf("Enter the area\n");
-  if(sacnf("%f",&t.area)!=1)
-  {
-    printf("error");
-    exit(0);
   }
-}
 void find_area(Triangle *t)
 {
-  int
+  t->area=0.5*t->base*t->altitude;
+}
+void find_n_areas(int n, Triangle t[n])
+{
+  for(int i=0;i<n;i++)
+    {
+      find_area(&t[i]);
+    }
+}
+Triangle find_smallest_triangle(int n, Triangle t[n])
+{
+  Triangle i,smallest = t[0];
+  for(int i=1;i<n;i++)
+    {
+      if(t[i].area < smallest.area)
+      {smallest=t[i];}
+    }
+  return(smallest);
+}
+void output(int n, Triangle t[n], Triangle smallest)
+{
+  printf("The smallest of all Triangle  areas is %f",t->area);
 }
