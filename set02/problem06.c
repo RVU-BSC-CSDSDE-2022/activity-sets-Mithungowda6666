@@ -34,6 +34,6 @@ void str_reverse(char *str, char *rev_str)
 
 void output(char *a,char *rev_str)
 {
-  printf("The reverse of given word is %s",a);
+  printf("The reverse of given word is %s",rev_str);
 }
   
