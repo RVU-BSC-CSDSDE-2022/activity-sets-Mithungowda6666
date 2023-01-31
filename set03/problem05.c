@@ -9,7 +9,8 @@ int main()
 {
   int n;
   n=input_array_size();
-  int a[n];
+  
+  int a[n+1];
   init_array(n, a);
   erotosthenes_sieve(n,a);
   output(n,a);
@@ -20,33 +21,34 @@ int input_array_size()
   int a;
   printf("Enter the size of the array");
   scanf("%d",&a);
-  return 0;
+  return a;
 }
 void init_array(int n, int a[n])
 {
   int i;
   for(i=0;i<n;i++)
     {
-      a[i] = input_array_size();
+      a[i] =1 ;
     }
 }
 void erotosthenes_sieve(int n, int a[n])
 {
   int i,j;
-  for(i=2;i<=sqrt(n);i++)
+  for(i=2;i<sqrt(n);i++)
     {
       if(a[i]!=0)
-        for(j=pow(a[i],2);j<n;j=j+a[i])
+        for(j=i;j<n/i;j++)
           {
-            a[j-1]=0;
+            a[j*i]=0;
           }
     }
 }
 void output(int n, int a[n])
 { int i;
+  
   for(i=0;i<n;i++)
     { 
       if(a[i]!=0)
-      printf("The output is %d,\t",a[n]);
+      printf("%d\t",a[n]);
     }
 }
