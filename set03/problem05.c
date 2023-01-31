@@ -28,7 +28,7 @@ void init_array(int n, int a[n])
   int i;
   for(i=0;i<n;i++)
     {
-      a[i] =1 ;
+      a[i] = 1 ;
     }
 }
 void erotosthenes_sieve(int n, int a[n])
@@ -49,6 +49,6 @@ void output(int n, int a[n])
   for(i=0;i<n;i++)
     { 
       if(a[i]!=0)
-      printf("%d\t",a[n]);
+      printf("%d\t",a[n-1]);
     }
 }
