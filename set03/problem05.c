@@ -37,7 +37,7 @@ void erotosthenes_sieve(int n, int a[n])
   for(i=2;i<sqrt(n);i++)
     {
       if(a[i]!=0)
-        for(j=i;j<n/i;j++)
+        for(j=i;j<=n/i;j++)
           {
             a[j*i]=0;
           }
@@ -46,9 +46,9 @@ void erotosthenes_sieve(int n, int a[n])
 void output(int n, int a[n])
 { int i;
   
-  for(i=0;i<n;i++)
+  for(i=2;i<n;i++)
     { 
       if(a[i]!=0)
-      printf("%d\t",a[n-1]);
+      printf("%d\t",i);
     }
 }
