@@ -36,4 +36,3 @@ void output(char *a,char *rev_str)
 {
   printf("The reverse of given word is %s",rev_str);
 }
-  
