@@ -40,9 +40,9 @@ Fraction find_smallest_fraction(Fraction f1, Fraction f2, Fraction f3)
     f1.num=(f1.num)*(f1.den/org1.den);
     f2.num=(f2.num)*(f2.den/org2.den);
     f3.num=(f3.num)*(f3.den/org3.den);
-    if(f1.num<=f2.num&&f1.num<=f3.num)
+    if(f1.num<=f2.num && f1.num<=f3.num)
       return org1;
-    if(f2.num<=f1.num&&f2.num<=f3.num)
+    if(f2.num<=f1.num && f2.num<=f3.num)
       return org2;
     return org3;
 }

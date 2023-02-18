@@ -1,22 +1,24 @@
 #include<stdio.h>
 #include<math.h>
-int input(int x);
+int input();
 float borga_X(int x);
 void output(int x, float result);
 
 int main()
 {
-  int x = input();
+  int x;
+  x = input();
   float result = borga_X(x);
   output(x,result);
   return 0;
 }
 
-int input(int x)
+int input()
 {
+  int n;
   printf("Enter the number : ");
-  scanf("%f",&x);
-  return x;
+  scanf("%d",&n);
+  return n;
 }
 float borga_X(int x)
 {
