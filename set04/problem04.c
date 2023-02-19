@@ -24,14 +24,14 @@ int input_degree()
   int degree;
   printf("Enter the degree\n");
   scanf("%d",&degree);
-  return degree;
+  return(degree);
 }
 void input_coefficients(int n, float a[n])
 {
   int i;
   for(i=0;i<=n;i++)
     {
-      printf("Enter the Coeffectient\n");
+      printf("Enter the Coefficient\n");
       scanf("%f",&a[i]);
     }
 }

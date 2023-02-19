@@ -23,7 +23,14 @@ int input_size()
   scanf("%d",&n);
   return n;
 }
-
+void input_array(int n, int a[n])
+{
+  for(int i=0;i<n; i++)
+    {
+      printf("Enter the number\n");
+      scanf("%d", &a[i]);
+    }
+}
 int find_largest_index(int n, int a[n])
 {
   int index=0;
