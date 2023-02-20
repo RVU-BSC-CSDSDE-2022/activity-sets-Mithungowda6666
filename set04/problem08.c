@@ -10,6 +10,18 @@ Fraction add_fractions(Fraction f1, Fraction f2);
 Fraction add_n_fractions(int n, Fraction f[n]);
 void output(int n, Fraction f[n], Fraction sum);
 
+int main()
+{
+   int n;
+   n = input_n();
+   Fraction f[n];
+   input_n_fractions(n, f);
+   Fraction sum;
+   sum = add_n_fractions(n, f);
+   output(n, f, sum);
+   return 0;
+}
+
 int input_n()
 {
   int n;
